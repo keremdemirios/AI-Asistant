@@ -11,6 +11,12 @@
 		41632DBD2B7FFEE60062CA4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41632DBC2B7FFEE60062CA4A /* ContentView.swift */; };
 		41632DBF2B7FFEE70062CA4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41632DBE2B7FFEE70062CA4A /* Assets.xcassets */; };
 		41632DC22B7FFEE70062CA4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41632DC12B7FFEE70062CA4A /* Preview Assets.xcassets */; };
+		41632DCA2B7FFF0A0062CA4A /* SiriWaveView in Frameworks */ = {isa = PBXBuildFile; productRef = 41632DC92B7FFF0A0062CA4A /* SiriWaveView */; };
+		41632DCD2B7FFF180062CA4A /* XCAOpenAIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 41632DCC2B7FFF180062CA4A /* XCAOpenAIClient */; };
+		41632DD02B8000E80062CA4A /* XCAOpenAIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 41632DCF2B8000E80062CA4A /* XCAOpenAIClient */; };
+		41632DD22B8000EE0062CA4A /* XCAOpenAIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 41632DD12B8000EE0062CA4A /* XCAOpenAIClient */; };
+		41632DD42B8000F40062CA4A /* SiriWaveView in Frameworks */ = {isa = PBXBuildFile; productRef = 41632DD32B8000F40062CA4A /* SiriWaveView */; };
+		41632DD62B8002740062CA4A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41632DD52B8002740062CA4A /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,8 @@
 		41632DBC2B7FFEE60062CA4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41632DBE2B7FFEE70062CA4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41632DC12B7FFEE70062CA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41632DCE2B8000980062CA4A /* AI Voice Asistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AI Voice Asistant.entitlements"; sourceTree = "<group>"; };
+		41632DD52B8002740062CA4A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +34,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41632DD02B8000E80062CA4A /* XCAOpenAIClient in Frameworks */,
+				41632DCD2B7FFF180062CA4A /* XCAOpenAIClient in Frameworks */,
+				41632DD42B8000F40062CA4A /* SiriWaveView in Frameworks */,
+				41632DD22B8000EE0062CA4A /* XCAOpenAIClient in Frameworks */,
+				41632DCA2B7FFF0A0062CA4A /* SiriWaveView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,10 +64,12 @@
 		41632DB92B7FFEE60062CA4A /* AI Voice Asistant */ = {
 			isa = PBXGroup;
 			children = (
+				41632DCE2B8000980062CA4A /* AI Voice Asistant.entitlements */,
 				41632DBA2B7FFEE60062CA4A /* AI_Voice_AsistantApp.swift */,
 				41632DBC2B7FFEE60062CA4A /* ContentView.swift */,
 				41632DBE2B7FFEE70062CA4A /* Assets.xcassets */,
 				41632DC02B7FFEE70062CA4A /* Preview Content */,
+				41632DD52B8002740062CA4A /* Models.swift */,
 			);
 			path = "AI Voice Asistant";
 			sourceTree = "<group>";
@@ -83,6 +98,13 @@
 			dependencies = (
 			);
 			name = "AI Voice Asistant";
+			packageProductDependencies = (
+				41632DC92B7FFF0A0062CA4A /* SiriWaveView */,
+				41632DCC2B7FFF180062CA4A /* XCAOpenAIClient */,
+				41632DCF2B8000E80062CA4A /* XCAOpenAIClient */,
+				41632DD12B8000EE0062CA4A /* XCAOpenAIClient */,
+				41632DD32B8000F40062CA4A /* SiriWaveView */,
+			);
 			productName = "AI Voice Asistant";
 			productReference = 41632DB72B7FFEE60062CA4A /* AI Voice Asistant.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 41632DAE2B7FFEE60062CA4A;
+			packageReferences = (
+				41632DC82B7FFF0A0062CA4A /* XCRemoteSwiftPackageReference "SiriWaveView" */,
+				41632DCB2B7FFF180062CA4A /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */,
+			);
 			productRefGroup = 41632DB82B7FFEE60062CA4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41632DD62B8002740062CA4A /* Models.swift in Sources */,
 				41632DBD2B7FFEE60062CA4A /* ContentView.swift in Sources */,
 				41632DBB2B7FFEE60062CA4A /* AI_Voice_AsistantApp.swift in Sources */,
 			);
@@ -269,17 +296,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AI Voice Asistant/AI Voice Asistant.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AI Voice Asistant/Preview Content\"";
 				DEVELOPMENT_TEAM = H6A8FF2GG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = " Talk with AI Asistant";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,6 +317,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "keremdemir.AI-Voice-Asistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -298,17 +330,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "AI Voice Asistant/AI Voice Asistant.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AI Voice Asistant/Preview Content\"";
 				DEVELOPMENT_TEAM = H6A8FF2GG8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = " Talk with AI Asistant";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,6 +351,8 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "keremdemir.AI-Voice-Asistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -344,6 +381,53 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41632DC82B7FFF0A0062CA4A /* XCRemoteSwiftPackageReference "SiriWaveView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/SiriWaveView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		41632DCB2B7FFF180062CA4A /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alfianlosari/XCAOpenAIClient.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41632DC92B7FFF0A0062CA4A /* SiriWaveView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41632DC82B7FFF0A0062CA4A /* XCRemoteSwiftPackageReference "SiriWaveView" */;
+			productName = SiriWaveView;
+		};
+		41632DCC2B7FFF180062CA4A /* XCAOpenAIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41632DCB2B7FFF180062CA4A /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */;
+			productName = XCAOpenAIClient;
+		};
+		41632DCF2B8000E80062CA4A /* XCAOpenAIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41632DCB2B7FFF180062CA4A /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */;
+			productName = XCAOpenAIClient;
+		};
+		41632DD12B8000EE0062CA4A /* XCAOpenAIClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41632DCB2B7FFF180062CA4A /* XCRemoteSwiftPackageReference "XCAOpenAIClient" */;
+			productName = XCAOpenAIClient;
+		};
+		41632DD32B8000F40062CA4A /* SiriWaveView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41632DC82B7FFF0A0062CA4A /* XCRemoteSwiftPackageReference "SiriWaveView" */;
+			productName = SiriWaveView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 41632DAF2B7FFEE60062CA4A /* Project object */;
 }
