@@ -17,6 +17,7 @@
 		41632DD22B8000EE0062CA4A /* XCAOpenAIClient in Frameworks */ = {isa = PBXBuildFile; productRef = 41632DD12B8000EE0062CA4A /* XCAOpenAIClient */; };
 		41632DD42B8000F40062CA4A /* SiriWaveView in Frameworks */ = {isa = PBXBuildFile; productRef = 41632DD32B8000F40062CA4A /* SiriWaveView */; };
 		41632DD62B8002740062CA4A /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41632DD52B8002740062CA4A /* Models.swift */; };
+		41632DD82B80035D0062CA4A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41632DD72B80035D0062CA4A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		41632DC12B7FFEE70062CA4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41632DCE2B8000980062CA4A /* AI Voice Asistant.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AI Voice Asistant.entitlements"; sourceTree = "<group>"; };
 		41632DD52B8002740062CA4A /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		41632DD72B80035D0062CA4A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +71,6 @@
 				41632DBC2B7FFEE60062CA4A /* ContentView.swift */,
 				41632DBE2B7FFEE70062CA4A /* Assets.xcassets */,
 				41632DC02B7FFEE70062CA4A /* Preview Content */,
-				41632DD52B8002740062CA4A /* Models.swift */,
 			);
 			path = "AI Voice Asistant";
 			sourceTree = "<group>";
@@ -78,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				41632DC12B7FFEE70062CA4A /* Preview Assets.xcassets */,
+				41632DD72B80035D0062CA4A /* ViewModel.swift */,
+				41632DD52B8002740062CA4A /* Models.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				41632DD62B8002740062CA4A /* Models.swift in Sources */,
 				41632DBD2B7FFEE60062CA4A /* ContentView.swift in Sources */,
+				41632DD82B80035D0062CA4A /* ViewModel.swift in Sources */,
 				41632DBB2B7FFEE60062CA4A /* AI_Voice_AsistantApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
