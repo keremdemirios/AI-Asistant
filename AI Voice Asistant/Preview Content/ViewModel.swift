@@ -184,11 +184,46 @@ class ViewModel: NSObject, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
         state = .idle
     }
     
+//    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+//        if !flag {
+//            resetValues()
+//        }
+//    }
+    
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-        if !flag {
+        if flag {
+            do {
+                // Ses kaydı tamamlandı, kaydedilen sesi al
+                let audioData = try Data(contentsOf: recorder.url)
+                
+                // Asenkron işlev çağrısı
+                processRecordedText(audioData)
+                
+            } catch {
+                print("Hata oluştu: \(error.localizedDescription) kerem1")
+                
+            }
+        } else {
             resetValues()
+            print("Ses kaydı başarısız.")
         }
     }
+
+    func processRecordedText(_ audioData: Data) {
+        Task {
+            do {
+                // Asenkron olarak metin oluştur
+                let recordedText = try await client.generateAudioTransciptions(audioData: audioData)
+                
+                // Oluşturulan metni yazdır
+                print("Kaydedilen metin: \(recordedText)")
+                
+            } catch {
+                print("Hata oluştu: \(error.localizedDescription) kerem2")
+            }
+        }
+    }
+
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         resetValues()
